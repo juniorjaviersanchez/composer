@@ -1,5 +1,14 @@
 <?php 
 
-function upper($value){
-    return Text\Format::upperText($value);
+// Si no existe la funcion lo crea
+if(!function_exists('upper')){
+    function upper($value){
+        return Text\Format::upperText($value);
+    }
+}
+
+if(!function_exists('lower')){
+    function lower($value){
+        return Text\Format::lowerText($value);
+    }
 }
